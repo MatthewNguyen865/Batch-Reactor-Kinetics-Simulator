@@ -5,7 +5,7 @@ tspan = [0, 10];
 [t, C] = ode45(@(t, C) -k * C, tspan, C0);
 X = (C0 - C)/C0;
 
-figure(1);
+figure("Name", "Batch Reactor Simulator", "NumberTitle", "off");
 tiledlayout(3, 1);
 
 nexttile;
@@ -26,7 +26,7 @@ xlabel("Time");
 ylabel("Conversion");
 title("Conversion in Batch Reactor");
 
-figure(2);
+figure("Name", "Numerical vs Analytical Solution", "NumberTitle", "off");
 tiledlayout(2, 1);
 
 C_analytical = C0 * exp(-k * t);
@@ -45,3 +45,26 @@ semilogy(t, error)
 xlabel("Time")
 ylabel("Absolute Error")
 title("Numerical Error (ode45 vs Analytical)")
+
+figure("Name", "Varying k", "NumberTitle", "off");
+tiledlayout(3, 1);
+
+k_values = [0.2, 0.5, 1.0];
+C0 = 1;
+tspan = [0 10];
+
+hold on
+
+for i = 1:length(k_values)
+    k = k_values(i);
+
+    [t, C] = ode45(@(t,C) -k*C, tspan, C0);
+
+    plot(t, C/C0, 'DisplayName', ['k = ' num2str(k)])
+end
+
+xlabel("Time")
+ylabel("Concentration")
+title("Sensitivity of Concentration to Reaction Rate Constant")
+legend
+hold off
