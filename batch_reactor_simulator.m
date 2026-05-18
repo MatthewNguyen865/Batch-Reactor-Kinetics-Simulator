@@ -7,3 +7,4 @@ tspan = [0, 10];
 plot(t, C);
 xlabel("Time");
 ylabel("Concentration");
+title("Batch Reactor Simulation");
