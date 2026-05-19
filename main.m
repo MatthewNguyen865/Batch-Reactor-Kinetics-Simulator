@@ -1,7 +1,18 @@
 % Parameters
-k = 0.5;
-C0 = 1;
-tspan = [0, 10];
+k = input("Enter reaction rate constant k (default 0.5): ");
+if isempty(k)
+    k = 0.5;
+end
+C0 = input("Enter initial concentration C0 (default 1): ");
+if isempty(C0)
+    C0 = 1;
+end
+t_final = input("Enter final simulation time (default 10): ");
+if isempty(t_final)
+    t_final = 10;
+end
+
+tspan = [0 t_final];
 
 % Solve ODE
 [t, C] = ode45(@(t, C) batch_ode(t, C, k), tspan, C0);
