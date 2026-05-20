@@ -1,10 +1,16 @@
 function plot_results(t, C, C0, k)
 
+if ~exist('example_plots','dir')
+    mkdir('example_plots')
+end
+
 set(groot,'defaultLineLineWidth',1.5);
 X = (C0 - C)/C0;
 
-figure("Name", "Batch Reactor Simulator", "NumberTitle", "off");
-tiledlayout(3, 1);
+figure("Name", "Batch Reactor Simulator", "NumberTitle", "off", "Position", [100, 100, 800, 600]); 
+tile = tiledlayout(3, 1);
+tile.TileSpacing = 'compact';
+tile.Padding = 'compact';
 
 nexttile;
 plot(t, C);
@@ -33,6 +39,8 @@ xlabel("Time");
 ylabel("Conversion");
 title("Conversion in Batch Reactor");
 
+exportgraphics(gcf,'example_plots/batch_reactor_simulator.png','Resolution',300);
+
 figure("Name", "Numerical vs Analytical Solution", "NumberTitle", "off");
 tiledlayout(2, 1);
 
@@ -52,6 +60,8 @@ semilogy(t, error);
 xlabel("Time");
 ylabel("Absolute Error");
 title("Numerical Error (ode45 vs Analytical)");
+
+exportgraphics(gcf,'example_plots/numerical_vs_analytical.png','Resolution',300);
 
 %% Sensitivity Analysis: Varying k
 
@@ -73,5 +83,7 @@ ylabel("Normalized Concentration");
 title("Sensitivity of Reaction Rate Constant on Reactor Behavior");
 legend;
 hold off;
+
+exportgraphics(gcf,'example_plots/varying_k.png','Resolution',300);
 
 end
