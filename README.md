@@ -5,11 +5,11 @@
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 <p align="center">
-  <img src="example_plots/concentration_plot.png" width="500">
+  <img src="example_plots/batch_reactor_simulator.png" width="500">
 </p>
 
 <p align="center">
-Concentration decay of reactant A in a first-order batch reactor.
+Concentration, rate of change, and conversion of reactant A in a first-order batch reactor.
 </p>
 
 ---
@@ -94,19 +94,19 @@ Example outputs are included in the `example_plots/` folder.
 ## Example Model Outputs
 
 <p align="center">
-<img src="example_plots/conversion_plot.png" width="500">
+<img src="example_plots/numerical_vs_analytical.png" width="500">
 </p>
 
 <p align="center">
-Conversion of reactant A over time in the batch reactor.
+Comparison between numerical and analytical solution alongside numerical error between the ODE solution and analytical solution.
 </p>
 
 <p align="center">
-<img src="example_plots/error_plot.png" width="500">
+<img src="example_plots/varying_k.png" width="500">
 </p>
 
 <p align="center">
-Numerical error between the ODE solution and analytical solution.
+Sensitivity of reaction rate to change in reaction rate constant.
 </p>
 
 ---
