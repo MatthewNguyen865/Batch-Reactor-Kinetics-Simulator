@@ -7,7 +7,7 @@ end
 set(groot,'defaultLineLineWidth',1.5);
 X = (C0 - C)/C0;
 
-figure("Name", "Batch Reactor Simulator", "NumberTitle", "off", "Position", [100, 100, 800, 750]); 
+figure("Name", "Batch Reactor Simulator", "NumberTitle", "off", "Position", [100, 100, 800, 700]); 
 tile = tiledlayout(3, 1);
 tile.TileSpacing = 'compact';
 tile.Padding = 'compact';
