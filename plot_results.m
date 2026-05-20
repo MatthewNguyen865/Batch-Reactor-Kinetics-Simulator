@@ -39,7 +39,9 @@ xlabel("Time");
 ylabel("Conversion");
 title("Conversion in Batch Reactor");
 
-exportgraphics(gcf,'example_plots/batch_reactor_simulator.png','Resolution',300);
+if ~exist('batch_reactor_simulator.png','file')
+    exportgraphics(gcf,'example_plots/batch_reactor_simulator.png','Resolution',300);
+end
 
 figure("Name", "Numerical vs Analytical Solution", "NumberTitle", "off");
 tiledlayout(2, 1);
@@ -61,7 +63,9 @@ xlabel("Time");
 ylabel("Absolute Error");
 title("Numerical Error (ode45 vs Analytical)");
 
-exportgraphics(gcf,'example_plots/numerical_vs_analytical.png','Resolution',300);
+if ~exist('example_plots/numerical_vs_analytical.png','file')
+    exportgraphics(gcf,'example_plots/numerical_vs_analytical.png','Resolution',300);
+end
 
 %% Sensitivity Analysis: Varying k
 
@@ -84,6 +88,8 @@ title("Sensitivity of Reaction Rate Constant on Reactor Behavior");
 legend;
 hold off;
 
-exportgraphics(gcf,'example_plots/varying_k.png','Resolution',300);
+if ~exist('example_plots/varying_k.png','file')
+    exportgraphics(gcf,'example_plots/varying_k.png','Resolution',300);
+end
 
 end

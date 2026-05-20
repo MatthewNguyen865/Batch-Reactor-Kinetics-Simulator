@@ -17,5 +17,15 @@ tspan = [0 t_final];
 %% Solve ODE
 [t, C] = ode45(@(t, C) batch_ode(t, C, k), tspan, C0);
 
+target_conversion = 0.90;
+
+X = (C0 - C) / C0;
+
+index = find(X >= target_conversion, 1);
+
+target_time = t(index);
+
+fprintf("Time to reach %.0f%% conversion: %.2f seconds\n", target_conversion * 100, target_time);
+
 %% Plot results
 plot_results(t, C, C0, k);
