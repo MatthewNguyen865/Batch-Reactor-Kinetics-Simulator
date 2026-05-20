@@ -98,7 +98,7 @@ Example outputs are included in the `example_plots/` folder.
 </p>
 
 <p align="center">
-Comparison between numerical and analytical solution alongside numerical error between the ODE solution and analytical solution.
+Comparison between numerical and analytical solutions alongside numerical error analysis.
 </p>
 
 <p align="center">
@@ -106,7 +106,7 @@ Comparison between numerical and analytical solution alongside numerical error b
 </p>
 
 <p align="center">
-Sensitivity of reaction rate to change in reaction rate constant.
+Effect of reaction rate constant on reactor behavior.
 </p>
 
 ---
@@ -120,10 +120,10 @@ batch-reactor-kinetics-simulator
 |--- plot_results.m
 |--- README.md
 |
-|--- examples_plots/
-     |--- concentration_plot.png
-     |--- conversion_plot.png
-     |--- error_plot.png
+|--- example_plots/
+     |--- batch_reactor_simulator.png
+     |--- numerical_vs_analytical.png
+     |--- varying_k.png
 ```
 
 ---

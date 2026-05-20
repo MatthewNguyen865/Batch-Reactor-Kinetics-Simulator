@@ -1,4 +1,4 @@
-function dCdt = batch_ode(t, C, k)
+function dCdt = batch_ode(~, C, k)
 
 % First-order batch reactor
 % Reaction: A -> Products

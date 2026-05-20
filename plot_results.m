@@ -7,7 +7,7 @@ end
 set(groot,'defaultLineLineWidth',1.5);
 X = (C0 - C)/C0;
 
-figure("Name", "Batch Reactor Simulator", "NumberTitle", "off", "Position", [100, 100, 800, 600]); 
+figure("Name", "Batch Reactor Simulator", "NumberTitle", "off", "Position", [100, 100, 800, 750]); 
 tile = tiledlayout(3, 1);
 tile.TileSpacing = 'compact';
 tile.Padding = 'compact';
@@ -39,7 +39,7 @@ xlabel("Time");
 ylabel("Conversion");
 title("Conversion in Batch Reactor");
 
-if ~exist('batch_reactor_simulator.png','file')
+if ~exist('example_plots/batch_reactor_simulator.png','file')
     exportgraphics(gcf,'example_plots/batch_reactor_simulator.png','Resolution',300);
 end
 
