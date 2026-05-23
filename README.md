@@ -1,8 +1,11 @@
 # Batch Reactor Kinetics Simulator
 
-![MATLAB](https://img.shields.io/badge/MATLAB-Simulation-orange)
-![Chemical Engineering](https://img.shields.io/badge/Field-Chemical%20Engineering-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
+![MATLAB](https://img.shields.io/badge/MATLAB-0076A8?logo=mathworks&logoColor=white)
+![ODE45](https://img.shields.io/badge/ODE-Solver-blue)
+![Numerical Methods](https://img.shields.io/badge/Numerical-Methods-8CAAE6)
+![Simulation](https://img.shields.io/badge/Process-Batch%20Reactor-orange)
+![Chemical Engineering](https://img.shields.io/badge/Field-Chemical%20Engineering-green)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
 <p align="center">
   <img src="example_plots/batch_reactor_simulator.png" width="500">
